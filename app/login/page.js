@@ -20,7 +20,7 @@ export default function LoginPage() {
 
   const onSubmit = async (data) => {
     try {
-      const res = await api.post("/auth/login", data);
+      const res = await api.post("/auth/login-admin", data);
       login(res.data.user, res.data.token, res.data.userType);
       router.replace("/dashboard"); // ✅ redirect properly
     } catch {
